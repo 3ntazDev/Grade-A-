@@ -1,9 +1,9 @@
 const CACHE_NAME = "gpa-calculator-cache-v1";
 const urlsToCache = [
   "./",
-  "./index.html",
+  "./Home.html",
   "./style.css",
-  "./script.js",
+  "./logic.js",
   "./manifest.json",
   "./icon-192x192.png",
   "./icon-512x512.png"
@@ -18,6 +18,7 @@ self.addEventListener("install", event => {
   );
 });
 
+// جلب الملفات من الكاش
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request).then(response => {
@@ -26,6 +27,7 @@ self.addEventListener("fetch", event => {
   );
 });
 
+// تحديث الكاش عند حدوث تغييرات
 self.addEventListener("activate", event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
