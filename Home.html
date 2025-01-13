@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب المعدل التراكمي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <div class="container">
+        <h1>حاسبة المعدل التراكمي</h1>
+        <div id="message" class="message"></div>
+
+        <div class="previous-gpa-section">
+            <h3>أدخل المعدل التراكمي السابق وعدد الساعات</h3>
+            <input type="number" id="previousGPA" placeholder="المعدل التراكمي السابق" step="0.01" min="0" max="4">
+            <input type="number" id="previousHours" placeholder="عدد الساعات السابقة" min="0">
+        </div>
+
+        <div class="input-section">
+            <h3>أدخل تفاصيل المادة</h3>
+            <input type="text" id="subjectName" placeholder="اسم المادة">
+            <input type="number" id="creditHours" placeholder="عدد الساعات" min="1">
+            <select id="grade">
+                <option value="5">+A</option>
+                <option value="4.75">A</option>
+                <option value="4.5">+B</option>
+                <option value="4.00">B</option>
+                <option value="3.5">+C</option>
+                <option value="3.00">C</option>
+                <option value="2.5">+D</option>
+                <option value="2.00">D</option>
+                <option value="0">F</option>
+            </select>
+            
+            <button id="addSubject">إضافة المادة</button>
+        </div>
+
+        <div>
+            <table id="subjectsTable">
+                <thead>
+                    <tr>
+                        <th>اسم المادة</th>
+                        <th>عدد الساعات</th>
+                        <th>التقدير</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="results">
+            <h3>المعدل الفصلي: <span id="semesterGPA">0.00</span></h3>
+            <h3>المعدل التراكمي: <span id="cumulativeGPA">0.00</span></h3>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+    
+    <div class="signature">
+        Designed by <strong>DevFahad</strong>
+    </div>
+    
+    <script src="logic.js">
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(error => console.log("Service Worker Registration Failed:", error));
+  }
+
+    </script>
+</body>
+</html>
