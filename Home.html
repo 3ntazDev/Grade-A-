@@ -8,6 +8,11 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+
+    <div id="loadingAnimation" class="loading-animation">
+        <span>A+</span>
+    </div>
+
     <div class="container">
         <h1>حاسبة المعدل التراكمي</h1>
         <div id="message" class="message"></div>
@@ -75,6 +80,20 @@
                 .then(() => console.log("Service Worker Registered Successfully"))
                 .catch(error => console.error("Service Worker Registration Failed:", error));
         }
+
+
+
+        window.onload = function() {
+            setTimeout(() => {
+                const loadingAnimation = document.getElementById("loadingAnimation");
+                loadingAnimation.style.opacity = "0"; // إضافة تأثير اختفاء
+                loadingAnimation.style.transition = "opacity 1s"; // انتقال سلس
+                setTimeout(() => {
+                    loadingAnimation.remove(); // حذف العنصر تمامًا من DOM
+                    document.getElementById("mainContent").style.display = "block"; // إظهار المحتوى الرئيسي
+                }, 1000); // تأخير حذف العنصر بعد انتهاء الأنيميشن
+            }, 3000); // الانتظار 3 ثوانٍ قبل بدء الاختفاء
+        };
     </script>
 </body>
 </html>
