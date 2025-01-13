@@ -6,19 +6,20 @@
     <title>حساب المعدل التراكمي</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-
 </head>
 <body>
     <div class="container">
         <h1>حاسبة المعدل التراكمي</h1>
         <div id="message" class="message"></div>
 
+        <!-- إدخال المعدل التراكمي السابق -->
         <div class="previous-gpa-section">
             <h3>أدخل المعدل التراكمي السابق وعدد الساعات</h3>
-            <input type="number" id="previousGPA" placeholder="المعدل التراكمي السابق" step="0.01" min="0" max="4">
+            <input type="number" id="previousGPA" placeholder="المعدل التراكمي السابق" step="0.01" min="0" max="5">
             <input type="number" id="previousHours" placeholder="عدد الساعات السابقة" min="0">
         </div>
 
+        <!-- إدخال تفاصيل المادة -->
         <div class="input-section">
             <h3>أدخل تفاصيل المادة</h3>
             <input type="text" id="subjectName" placeholder="اسم المادة">
@@ -34,10 +35,10 @@
                 <option value="2.00">D</option>
                 <option value="0">F</option>
             </select>
-            
             <button id="addSubject">إضافة المادة</button>
         </div>
 
+        <!-- جدول المواد -->
         <div>
             <table id="subjectsTable">
                 <thead>
@@ -52,27 +53,28 @@
             </table>
         </div>
 
+        <!-- عرض النتائج -->
         <div class="results">
             <h3>المعدل الفصلي: <span id="semesterGPA">0.00</span></h3>
             <h3>المعدل التراكمي: <span id="cumulativeGPA">0.00</span></h3>
         </div>
     </div>
-    <div class="container">
-    </div>
     
+    <!-- التوقيع -->
     <div class="signature">
         Designed by <strong>DevFahad</strong>
     </div>
     
-    <script src="logic.js">
-
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("service-worker.js")
-      .then(() => console.log("Service Worker Registered"))
-      .catch(error => console.log("Service Worker Registration Failed:", error));
-  }
-
+    <!-- سكربتات -->
+    <script src="logic.js"></script>
+    <script>
+        // تسجيل Service Worker
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+                .register("service-worker.js")
+                .then(() => console.log("Service Worker Registered Successfully"))
+                .catch(error => console.error("Service Worker Registration Failed:", error));
+        }
     </script>
 </body>
 </html>
