@@ -127,3 +127,23 @@ table th {
 #mainContent {
     display: none;
 }
+
+
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5); /* خلفية نصف شفافة */
+    border: 3px solid rgba(58, 175, 169, 0.7); /* حدود شفافة بلون مطابق */
+    border-radius: 10px; /* زوايا مستديرة */
+    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+
+.gif-container img {
+    max-width: 100%; /* يجعل الصورة تستجيب */
+    border-radius: 5px; /* زوايا مستديرة للصورة نفسها */
+}
