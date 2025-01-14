@@ -94,18 +94,6 @@ table th {
 }
 
 
-/* أنيميشن A+ */
-.loading-animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #EAF8F3; /* لون خلفية فاتح */
-    color: #3AAFA9; /* لون النص */
-    font-size: 80px;
-    font-weight: bold;
-    animation: fadeInOut 3s ease-in-out;
-}
 
 /* الرسوم المتحركة */
 @keyframes fadeInOut {
@@ -146,4 +134,33 @@ table th {
 .gif-container img {
     max-width: 100%; /* يجعل الصورة تستجيب */
     border-radius: 5px; /* زوايا مستديرة للصورة نفسها */
+}
+
+
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EAF8F3; /* لون خلفية فاتح */
+}
+
+.loading-animation img {
+    width: 400px; /* حجم الصورة */
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
