@@ -30,6 +30,7 @@ document.getElementById('addSubject').addEventListener('click', function () {
     document.getElementById('grade').value = '';
 });
 
+
 function updateTable() {
     const tbody = document.querySelector('#subjectsTable tbody');
     tbody.innerHTML = '';
