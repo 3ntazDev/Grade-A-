@@ -30,7 +30,6 @@ document.getElementById('addSubject').addEventListener('click', function () {
     document.getElementById('grade').value = '';
 });
 
-
 function updateTable() {
     const tbody = document.querySelector('#subjectsTable tbody');
     tbody.innerHTML = '';
@@ -81,3 +80,10 @@ function convertGradeToLetter(grade) {
         default: return "F";
     }
 }
+
+// تبديل الوضع الداكن
+document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.container').classList.toggle('dark-mode');
+    document.querySelector('#subjectsTable').classList.toggle('dark-mode');
+});

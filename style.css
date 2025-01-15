@@ -198,5 +198,28 @@ table th {
     fill: #FFFFFF; /* لون الأيقونة عند التحويم */
     transform: scale(1.2);
   }
-  
-  
+
+
+  /* ألوان الوضع الداكن */
+body.dark-mode {
+    background-color: #121212; /* لون خلفية غامق */
+    color: #e0e0e0; /* لون النص */
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e; /* لون خلفية الحاوية */
+    border-color: #3AAFA9; /* لون الإطار */
+}
+
+table.dark-mode th {
+    background-color: #3AAFA9; /* لون عنوان الجدول */
+}
+
+table.dark-mode td {
+    background-color: #2a2a2a; /* لون خلايا الجدول */
+    color: #e0e0e0; /* لون النص في الجدول */
+}
+
+.results.dark-mode h3 {
+    color: #3AAFA9; /* لون النص في النتائج */
+}
