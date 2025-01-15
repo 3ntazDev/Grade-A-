@@ -36,20 +36,6 @@ input, select {
     box-sizing: border-box;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #3AAFA9; /* لون الزر */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #2C9C90; /* لون عند التحويم */
-}
 
 table {
     width: 100%;
@@ -164,3 +150,53 @@ table th {
         transform: scale(1);
     }
 }
+
+/* From Uiverse.io by AlimurtuzaCodes */
+.btn {
+    border: none;
+    width: 10em; /* تقليل العرض */
+    height: 3em; /* تقليل الارتفاع */
+    border-radius: 1.5em; /* تصغير الزوايا */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* تقليل المسافة بين الأيقونة والنص */
+    background: #3AAFA9; /* اللون الأساسي */
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+    margin-top: 10px; /* إضافة مسافة من الأعلى لتحريكه للأسفل */
+  }
+  
+  
+  .sparkle {
+    fill: #FFFFFF; /* لون الأيقونة */
+    transition: all 800ms ease;
+    width: 16px; /* تصغير حجم الأيقونة */
+    height: 16px; /* تصغير حجم الأيقونة */
+  }
+  
+  .text {
+    font-weight: 600;
+    color: #FFFFFF; /* لون النص */
+    font-size: small; /* تقليل حجم النص */
+  }
+  
+  .btn:hover {
+    background: linear-gradient(0deg, #3AAFA9, #2D8F86); /* تدرج عند التحويم */
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+      inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+      0px 0px 180px 0px #3AAFA9; /* تأثير التوهج */
+    transform: translateY(-2px);
+  }
+  
+  .btn:hover .text {
+    color: #FFFFFF; /* لون النص عند التحويم */
+  }
+  
+  .btn:hover .sparkle {
+    fill: #FFFFFF; /* لون الأيقونة عند التحويم */
+    transform: scale(1.2);
+  }
+  
+  

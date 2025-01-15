@@ -1,0 +1,232 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #EAF8F3;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid #3AAFA9;
+  /* لون الإطار */
+}
+
+h1 {
+  text-align: center;
+  color: #3AAFA9;
+  /* لون العنوان */
+}
+
+.previous-gpa-section, .input-section {
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #3AAFA9;
+  /* لون الإطار */
+  border-radius: 4px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #3AAFA9;
+  /* لون عنوان الجدول */
+  color: white;
+}
+
+.results {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.results h3 {
+  margin: 10px 0;
+  color: #3AAFA9;
+}
+
+.message {
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* توقيع */
+
+.signature {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 10px;
+  /* حجم صغير */
+  color: #3AAFA9;
+  font-family: 'Cursive', Arial, sans-serif;
+}
+
+/* الرسوم المتحركة */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* إخفاء المحتوى الرئيسي افتراضياً */
+
+#mainContent {
+  display: none;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  /* خلفية نصف شفافة */
+  border: 3px solid rgba(58, 175, 169, 0.7);
+  /* حدود شفافة بلون مطابق */
+  border-radius: 10px;
+  /* زوايا مستديرة */
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* تأثير الظل */
+}
+
+.gif-container img {
+  max-width: 100%;
+  /* يجعل الصورة تستجيب */
+  border-radius: 5px;
+  /* زوايا مستديرة للصورة نفسها */
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EAF8F3;
+  /* لون خلفية فاتح */
+}
+
+.loading-animation img {
+  width: 400px;
+  /* حجم الصورة */
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* From Uiverse.io by AlimurtuzaCodes */
+
+.btn {
+  border: none;
+  width: 10em;
+  /* تقليل العرض */
+  height: 3em;
+  /* تقليل الارتفاع */
+  border-radius: 1.5em;
+  /* تصغير الزوايا */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  /* تقليل المسافة بين الأيقونة والنص */
+  background: #3AAFA9;
+  /* اللون الأساسي */
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  margin-top: 10px;
+  /* إضافة مسافة من الأعلى لتحريكه للأسفل */
+}
+
+.sparkle {
+  fill: #FFFFFF;
+  /* لون الأيقونة */
+  transition: all 800ms ease;
+  width: 16px;
+  /* تصغير حجم الأيقونة */
+  height: 16px;
+  /* تصغير حجم الأيقونة */
+}
+
+.text {
+  font-weight: 600;
+  color: #FFFFFF;
+  /* لون النص */
+  font-size: small;
+  /* تقليل حجم النص */
+}
+
+.btn:hover {
+  background: linear-gradient(0deg, #3AAFA9, #2D8F86);
+  /* تدرج عند التحويم */
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+      inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+      0px 0px 180px 0px #3AAFA9;
+  /* تأثير التوهج */
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: #FFFFFF;
+  /* لون النص عند التحويم */
+}
+
+.btn:hover .sparkle {
+  fill: #FFFFFF;
+  /* لون الأيقونة عند التحويم */
+  transform: scale(1.2);
+}
+  
+  
