@@ -24,10 +24,17 @@ self.addEventListener("install", event => {
 self.addEventListener("fetch", event => {
   event.respondWith(
       caches.match(event.request).then(response => {
-          return response || fetch(event.request);
+          return response || fetch(event.request).catch(() => {
+              console.error("Failed to fetch resource:", event.request.url);
+              return new Response("Resource not available offline.", {
+                  status: 404,
+                  statusText: "Not Found"
+              });
+          });
       })
   );
 });
+
 
 
 
